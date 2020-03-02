@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+<body>
+
+{% block content %}
+	<h1>WELCOME , {{user.username}} </h1>
+	{% if response.user.is_authenticated %}
+	<a id="loid" href="{% url 'LogoutView' %}">LogOut</a>
+	<button onclick="getElementById('loid')">Logout</button>
+	{% else %}
+		
+	{% endif %}
+
+{% endblock %}
+
+</body>
